@@ -1,0 +1,42 @@
+{
+    "sourceFile": "frontend/src/useKeyboardShortcut.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1684091400471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1684092892768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,13 +19,13 @@\n       () => handleOnChangeRef.current(valueRef.current + 1),\n       () => handleOnChangeRef.current(valueRef.current - 1),\n       updateStreamlit\n     );\n-    // window.parent.document.addEventListener(\"keydown\", keyboardShortcutHandler);\n+    window.parent.document.addEventListener(\"keydown\", keyboardShortcutHandler);\n     window.addEventListener(\"keydown\", keyboardShortcutHandler);\n \n     return () => {\n-      window.parent.document.removeEventListener(\"keydown\", keyboardShortcutHandler);\n-    //   window.removeEventListener(\"keydown\", keyboardShortcutHandler);\n+      // window.parent.document.removeEventListener(\"keydown\", keyboardShortcutHandler);\n+      window.removeEventListener(\"keydown\", keyboardShortcutHandler);\n     };\n   }, []);\n };\n"
+                },
+                {
+                    "date": 1684092898675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,12 +20,12 @@\n       () => handleOnChangeRef.current(valueRef.current - 1),\n       updateStreamlit\n     );\n     window.parent.document.addEventListener(\"keydown\", keyboardShortcutHandler);\n-    window.addEventListener(\"keydown\", keyboardShortcutHandler);\n+    // window.addEventListener(\"keydown\", keyboardShortcutHandler);\n \n     return () => {\n-      // window.parent.document.removeEventListener(\"keydown\", keyboardShortcutHandler);\n-      window.removeEventListener(\"keydown\", keyboardShortcutHandler);\n+      window.parent.document.removeEventListener(\"keydown\", keyboardShortcutHandler);\n+      // window.removeEventListener(\"keydown\", keyboardShortcutHandler);\n     };\n   }, []);\n };\n"
+                },
+                {
+                    "date": 1684092908217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,9 @@\n     window.parent.document.addEventListener(\"keydown\", keyboardShortcutHandler);\n     // window.addEventListener(\"keydown\", keyboardShortcutHandler);\n \n     return () => {\n+      // TODO - enable if \n       window.parent.document.removeEventListener(\"keydown\", keyboardShortcutHandler);\n       // window.removeEventListener(\"keydown\", keyboardShortcutHandler);\n     };\n   }, []);\n"
+                },
+                {
+                    "date": 1684092925214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n     window.parent.document.addEventListener(\"keydown\", keyboardShortcutHandler);\n     // window.addEventListener(\"keydown\", keyboardShortcutHandler);\n \n     return () => {\n-      // TODO - enable if \n+      // TODO - enable if in release mode. This doesn't work with the npm run start, but works when buil\n       window.parent.document.removeEventListener(\"keydown\", keyboardShortcutHandler);\n       // window.removeEventListener(\"keydown\", keyboardShortcutHandler);\n     };\n   }, []);\n"
+                },
+                {
+                    "date": 1684092930413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n     window.parent.document.addEventListener(\"keydown\", keyboardShortcutHandler);\n     // window.addEventListener(\"keydown\", keyboardShortcutHandler);\n \n     return () => {\n-      // TODO - enable if in release mode. This doesn't work with the npm run start, but works when buil\n+      // TODO - enable if in release mode. This doesn't work with the npm run start, but works when build and deployed\n       window.parent.document.removeEventListener(\"keydown\", keyboardShortcutHandler);\n       // window.removeEventListener(\"keydown\", keyboardShortcutHandler);\n     };\n   }, []);\n"
+                },
+                {
+                    "date": 1684092938656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n       () => handleOnChangeRef.current(valueRef.current + 1),\n       () => handleOnChangeRef.current(valueRef.current - 1),\n       updateStreamlit\n     );\n+    // TODO - enable if in release mode. This doesn't work with the npm run start, but works when build and deployed\n     window.parent.document.addEventListener(\"keydown\", keyboardShortcutHandler);\n     // window.addEventListener(\"keydown\", keyboardShortcutHandler);\n \n     return () => {\n"
+                }
+            ],
+            "date": 1684091400471,
+            "name": "Commit-0",
+            "content": "import { useEffect, useRef } from \"react\";\nimport { createKeyboardShortcutHandler } from \"./callbackHandlers\";\n\nexport const useKeyboardShortcut = (\n  value: number,\n  handleOnChange: (value: number) => void,\n  updateStreamlit: () => void\n) => {\n  const valueRef = useRef(value);\n  const handleOnChangeRef = useRef(handleOnChange);\n\n  useEffect(() => {\n    valueRef.current = value;\n    handleOnChangeRef.current = handleOnChange;\n  }, [value, handleOnChange]);\n\n  useEffect(() => {\n    const keyboardShortcutHandler = createKeyboardShortcutHandler(\n      () => handleOnChangeRef.current(valueRef.current + 1),\n      () => handleOnChangeRef.current(valueRef.current - 1),\n      updateStreamlit\n    );\n    // window.parent.document.addEventListener(\"keydown\", keyboardShortcutHandler);\n    window.addEventListener(\"keydown\", keyboardShortcutHandler);\n\n    return () => {\n      window.parent.document.removeEventListener(\"keydown\", keyboardShortcutHandler);\n    //   window.removeEventListener(\"keydown\", keyboardShortcutHandler);\n    };\n  }, []);\n};\n"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "sourceFile": "__init__.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1684091174587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1684092954745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import os\n import streamlit.components.v1 as components\n from pathlib import Path\n \n-_RELEASE = False\n-# _RELEASE = True\n+# _RELEASE = False\n+_RELEASE = True\n \n \n if _RELEASE:\n     curr_dir = Path(__file__).parent / 'frontend/build'\n@@ -12,9 +12,9 @@\n else:\n     _component_func = components.declare_component(\n         \"custom_slider\",\n         # url=\"http://localhost:3001\",\n-        url=\"http://10.155.43.188:3001\",\n+        url=\"http://10.155.43.188:3002\",\n     )\n     \n \n \n"
+                }
+            ],
+            "date": 1684091174587,
+            "name": "Commit-0",
+            "content": "import os\nimport streamlit.components.v1 as components\nfrom pathlib import Path\n\n_RELEASE = False\n# _RELEASE = True\n\n\nif _RELEASE:\n    curr_dir = Path(__file__).parent / 'frontend/build'\n    _component_func = components.declare_component(\"custom_slider\", path=str(curr_dir))\nelse:\n    _component_func = components.declare_component(\n        \"custom_slider\",\n        # url=\"http://localhost:3001\",\n        url=\"http://10.155.43.188:3001\",\n    )\n    \n\n\ndef st_slider(min_value, max_value, default_value=0, key=None):\n    \n    component_value = _component_func(key=key, default=default_value,initialValue=default_value, minValue=min_value, maxValue=max_value)\n\n    # We could modify the value returned from the component if we wanted.\n    # There's no need to do this in our simple example - but it's an option.\n    return component_value"
+        }
+    ]
+}

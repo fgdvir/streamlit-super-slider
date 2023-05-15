@@ -1,0 +1,142 @@
+{
+    "sourceFile": "frontend/src/CustomSlider.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 31,
+            "patches": [
+                {
+                    "date": 1684091070526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1684091076687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import React, { useEffect, useState, useRef } from \"react\";\n import Slider from \"rc-slider\";\n import SliderTooltip from \"./SliderTooltip\";\n import TextField from \"@material-ui/core/TextField\";\n-\n+import { Button } from \"@material-ui/core\";\n import { useMouseUpHandler,createHandleInputValueChange, createInputChange } from \"./callbackHandlers\";\n import {useKeyboardShortcut} from './useKeyboardShortcut'\n import \"rc-slider/assets/index.css\";\n \n"
+                },
+                {
+                    "date": 1684091330096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,10 @@\n } from \"streamlit-component-lib\";\n import React, { useEffect, useState, useRef } from \"react\";\n import Slider from \"rc-slider\";\n import SliderTooltip from \"./SliderTooltip\";\n-import TextField from \"@material-ui/core/TextField\";\n+import Te\n+xtField from \"@material-ui/core/TextField\";\n import { Button } from \"@material-ui/core\";\n import { useMouseUpHandler,createHandleInputValueChange, createInputChange } from \"./callbackHandlers\";\n import {useKeyboardShortcut} from './useKeyboardShortcut'\n import \"rc-slider/assets/index.css\";\n"
+                },
+                {
+                    "date": 1684091424423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,9 @@\n } from \"streamlit-component-lib\";\n import React, { useEffect, useState, useRef } from \"react\";\n import Slider from \"rc-slider\";\n import SliderTooltip from \"./SliderTooltip\";\n-import Te\n-xtField from \"@material-ui/core/TextField\";\n+import TextField from \"@material-ui/core/TextField\";\n import { Button } from \"@material-ui/core\";\n import { useMouseUpHandler,createHandleInputValueChange, createInputChange } from \"./callbackHandlers\";\n import {useKeyboardShortcut} from './useKeyboardShortcut'\n import \"rc-slider/assets/index.css\";\n@@ -103,8 +102,9 @@\n                 <SliderTooltip theme={theme}>{value}</SliderTooltip>\n               </div>\n             );\n           }}\n+          \n         />\n       </div>\n     </div>\n     </ThemeProvider>\n"
+                },
+                {
+                    "date": 1684091430287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,9 +102,8 @@\n                 <SliderTooltip theme={theme}>{value}</SliderTooltip>\n               </div>\n             );\n           }}\n-          \n         />\n       </div>\n     </div>\n     </ThemeProvider>\n"
+                },
+                {
+                    "date": 1684091437322,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -95,16 +95,17 @@\n           max={maxValue}\n           marks={marks}\n           onChange={handleOnChange}\n           trackStyle={{ backgroundColor: theme.primaryColor }}\n-          handleRender={(renderProps) => {\n+        <  handleRender={(renderProps) => {\n             return (\n               <div {...renderProps.props}>\n                 <SliderTooltip theme={theme}>{value}</SliderTooltip>\n               </div>\n             );\n           }}\n         />\n+\n       </div>\n     </div>\n     </ThemeProvider>\n   );\n"
+                },
+                {
+                    "date": 1684091443651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -95,17 +95,17 @@\n           max={maxValue}\n           marks={marks}\n           onChange={handleOnChange}\n           trackStyle={{ backgroundColor: theme.primaryColor }}\n-        <  handleRender={(renderProps) => {\n+          handleRender={(renderProps) => {\n             return (\n               <div {...renderProps.props}>\n                 <SliderTooltip theme={theme}>{value}</SliderTooltip>\n               </div>\n             );\n           }}\n         />\n-\n+        <Button\n       </div>\n     </div>\n     </ThemeProvider>\n   );\n"
+                },
+                {
+                    "date": 1684091466150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -103,9 +103,10 @@\n               </div>\n             );\n           }}\n         />\n-        <Button\n+        <Button variant=\"contained\" color=\"primary\" onClick={updateStreamlit}>\n+          \n       </div>\n     </div>\n     </ThemeProvider>\n   );\n"
+                },
+                {
+                    "date": 1684091473475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n             );\n           }}\n         />\n         <Button variant=\"contained\" color=\"primary\" onClick={updateStreamlit}>\n-          \n+          \"<\"\n       </div>\n     </div>\n     </ThemeProvider>\n   );\n"
+                },
+                {
+                    "date": 1684091487470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -105,8 +105,9 @@\n           }}\n         />\n         <Button variant=\"contained\" color=\"primary\" onClick={updateStreamlit}>\n           \"<\"\n+        </Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button>\n       </div>\n     </div>\n     </ThemeProvider>\n   );\n"
+                },
+                {
+                    "date": 1684091500887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,10 +104,9 @@\n             );\n           }}\n         />\n         <Button variant=\"contained\" color=\"primary\" onClick={updateStreamlit}>\n-          \"<\"\n-        </Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button>\n+          ></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button>\n       </div>\n     </div>\n     </ThemeProvider>\n   );\n"
+                },
+                {
+                    "date": 1684091506956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n             );\n           }}\n         />\n         <Button variant=\"contained\" color=\"primary\" onClick={updateStreamlit}>\n-          ></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button>\n+          ,\n       </div>\n     </div>\n     </ThemeProvider>\n   );\n"
+                },
+                {
+                    "date": 1684091512637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -105,8 +105,9 @@\n           }}\n         />\n         <Button variant=\"contained\" color=\"primary\" onClick={updateStreamlit}>\n           ,\n+        </Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button>\n       </div>\n     </div>\n     </ThemeProvider>\n   );\n"
+                },
+                {
+                    "date": 1684091518537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -105,9 +105,9 @@\n           }}\n         />\n         <Button variant=\"contained\" color=\"primary\" onClick={updateStreamlit}>\n           ,\n-        </Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button></Button>\n+        </Button\n       </div>\n     </div>\n     </ThemeProvider>\n   );\n"
+                },
+                {
+                    "date": 1684091525598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,10 +104,10 @@\n             );\n           }}\n         />\n         <Button variant=\"contained\" color=\"primary\" onClick={updateStreamlit}>\n-          ,\n-        </Button\n+          \\<\n+        </Button>\n       </div>\n     </div>\n     </ThemeProvider>\n   );\n"
+                },
+                {
+                    "date": 1684091531650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n             );\n           }}\n         />\n         <Button variant=\"contained\" color=\"primary\" onClick={updateStreamlit}>\n-          \\<\n+          \\\\<\n         </Button>\n       </div>\n     </div>\n     </ThemeProvider>\n"
+                },
+                {
+                    "date": 1684091590330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n             );\n           }}\n         />\n         <Button variant=\"contained\" color=\"primary\" onClick={updateStreamlit}>\n-          \\\\<\n+        &lt;\n         </Button>\n       </div>\n     </div>\n     </ThemeProvider>\n"
+                },
+                {
+                    "date": 1684091601240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -103,11 +103,9 @@\n               </div>\n             );\n           }}\n         />\n-        <Button variant=\"contained\" color=\"primary\" onClick={updateStreamlit}>\n-        &lt;\n-        </Button>\n+        \n       </div>\n     </div>\n     </ThemeProvider>\n   );\n"
+                },
+                {
+                    "date": 1684091609434,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,8 +77,9 @@\n     <ThemeProvider theme={muiTheme}>\n     <div style={{ paddingLeft: \"15px\", paddingRight: \"15px\", paddingTop: \"10px\"}}>\n       \n       <div style={{ display: \"flex\", alignItems: \"center\" }}>\n+        \n         <TextField\n           type=\"text\"\n           value={inputValue}\n           inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}\n"
+                },
+                {
+                    "date": 1684091615642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,9 +77,14 @@\n     <ThemeProvider theme={muiTheme}>\n     <div style={{ paddingLeft: \"15px\", paddingRight: \"15px\", paddingTop: \"10px\"}}>\n       \n       <div style={{ display: \"flex\", alignItems: \"center\" }}>\n-        \n+      <Button variant=\"contained\" color=\"primary\" onClick={updateStreamlit}>\n+        &lt;\n+        </Button>\n+        <Button variant=\"contained\" color=\"primary\" onClick={updateStreamlit}>\n+        &lt;\n+        </Button>\n         <TextField\n           type=\"text\"\n           value={inputValue}\n           inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}\n"
+                },
+                {
+                    "date": 1684091654045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,9 +81,9 @@\n       <Button variant=\"contained\" color=\"primary\" onClick={updateStreamlit}>\n         &lt;\n         </Button>\n         <Button variant=\"contained\" color=\"primary\" onClick={updateStreamlit}>\n-        &lt;\n+        &gt;\n         </Button>\n         <TextField\n           type=\"text\"\n           value={inputValue}\n"
+                },
+                {
+                    "date": 1684091666669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,9 +80,9 @@\n       <div style={{ display: \"flex\", alignItems: \"center\" }}>\n       <Button variant=\"contained\" color=\"primary\" onClick={updateStreamlit}>\n         &lt;\n         </Button>\n-        <Button variant=\"contained\" color=\"primary\" onClick={updateStreamlit}>\n+        <Button variant=\"contained\" color=\"primary\" size=onClick={updateStreamlit}>\n         &gt;\n         </Button>\n         <TextField\n           type=\"text\"\n"
+                },
+                {
+                    "date": 1684091672450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,9 +80,9 @@\n       <div style={{ display: \"flex\", alignItems: \"center\" }}>\n       <Button variant=\"contained\" color=\"primary\" onClick={updateStreamlit}>\n         &lt;\n         </Button>\n-        <Button variant=\"contained\" color=\"primary\" size=onClick={updateStreamlit}>\n+        <Button variant=\"contained\" color=\"primary\" size=\"small\" onClick={updateStreamlit}>\n         &gt;\n         </Button>\n         <TextField\n           type=\"text\"\n"
+                },
+                {
+                    "date": 1684091682684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,9 +77,9 @@\n     <ThemeProvider theme={muiTheme}>\n     <div style={{ paddingLeft: \"15px\", paddingRight: \"15px\", paddingTop: \"10px\"}}>\n       \n       <div style={{ display: \"flex\", alignItems: \"center\" }}>\n-      <Button variant=\"contained\" color=\"primary\" onClick={updateStreamlit}>\n+      <Button variant=\"contained\" color=\"primary\"size=\"small\"  onClick={updateStreamlit}>\n         &lt;\n         </Button>\n         <Button variant=\"contained\" color=\"primary\" size=\"small\" onClick={updateStreamlit}>\n         &gt;\n"
+                },
+                {
+                    "date": 1684092030801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,12 +77,13 @@\n     <ThemeProvider theme={muiTheme}>\n     <div style={{ paddingLeft: \"15px\", paddingRight: \"15px\", paddingTop: \"10px\"}}>\n       \n       <div style={{ display: \"flex\", alignItems: \"center\" }}>\n-      <Button variant=\"contained\" color=\"primary\"size=\"small\"  onClick={updateStreamlit}>\n+      <Button variant=\"contained\" color=\"primary\" size=\"small\"  onClick={updateStreamlit}>\n         &lt;\n         </Button>\n-        <Button variant=\"contained\" color=\"primary\" size=\"small\" onClick={updateStreamlit}>\n+        <Button variant=\"contained\" color=\"primary\" size=\"small\" onClick={updateStreamlit\n+        }>\n         &gt;\n         </Button>\n         <TextField\n           type=\"text\"\n"
+                },
+                {
+                    "date": 1684092037019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,10 +80,11 @@\n       <div style={{ display: \"flex\", alignItems: \"center\" }}>\n       <Button variant=\"contained\" color=\"primary\" size=\"small\"  onClick={updateStreamlit}>\n         &lt;\n         </Button>\n-        <Button variant=\"contained\" color=\"primary\" size=\"small\" onClick={updateStreamlit\n-        }>\n+        <Button variant=\"contained\" color=\"primary\" size=\"small\" onClick={updateStreamlit}\n+          \n+        >\n         &gt;\n         </Button>\n         <TextField\n           type=\"text\"\n"
+                },
+                {
+                    "date": 1684092046096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,9 +81,9 @@\n       <Button variant=\"contained\" color=\"primary\" size=\"small\"  onClick={updateStreamlit}>\n         &lt;\n         </Button>\n         <Button variant=\"contained\" color=\"primary\" size=\"small\" onClick={updateStreamlit}\n-          \n+          style={{ minWidth: \"unset\", padding: \"4px\" }}\n         >\n         &gt;\n         </Button>\n         <TextField\n"
+                },
+                {
+                    "date": 1684092213354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -92,9 +92,9 @@\n           inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}\n           onChange={handleInputValueChange}\n           onKeyDown={handleInputChange}\n           variant=\"outlined\"\n-          size=\"small\"\n+          size=\"medium\"\n           style={{ marginRight: \"10px\", width: \"75px\" }}\n           // className={classes.textField}\n         />\n         <Slider\n"
+                },
+                {
+                    "date": 1684092233238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -92,10 +92,10 @@\n           inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}\n           onChange={handleInputValueChange}\n           onKeyDown={handleInputChange}\n           variant=\"outlined\"\n-          size=\"medium\"\n-          style={{ marginRight: \"10px\", width: \"75px\" }}\n+          size=\"small\"\n+          style={{ marginRight: \"10px\", width: \"75px\"  }}\n           // className={classes.textField}\n         />\n         <Slider\n           value={value}\n"
+                },
+                {
+                    "date": 1684092243482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,9 +93,9 @@\n           onChange={handleInputValueChange}\n           onKeyDown={handleInputChange}\n           variant=\"outlined\"\n           size=\"small\"\n-          style={{ marginRight: \"10px\", width: \"75px\"  }}\n+          style={{ marginRight: \"10px\", width: \"75px\", height=\"\" }}\n           // className={classes.textField}\n         />\n         <Slider\n           value={value}\n"
+                },
+                {
+                    "date": 1684092295019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,9 +93,9 @@\n           onChange={handleInputValueChange}\n           onKeyDown={handleInputChange}\n           variant=\"outlined\"\n           size=\"small\"\n-          style={{ marginRight: \"10px\", width: \"75px\", height=\"\" }}\n+          style={{ marginRight: \"10px\", width: \"75px\",   }}\n           // className={classes.textField}\n         />\n         <Slider\n           value={value}\n"
+                },
+                {
+                    "date": 1684092300334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,8 +93,9 @@\n           onChange={handleInputValueChange}\n           onKeyDown={handleInputChange}\n           variant=\"outlined\"\n           size=\"small\"\n+          style={{ marginRight: \"10px\", width: \"75px\",   }}\n           style={{ marginRight: \"10px\", width: \"75px\", }}\n           // className={classes.textField}\n         />\n         <Slider\n"
+                }
+            ],
+            "date": 1684091070526,
+            "name": "Commit-0",
+            "content": "import {\n  Streamlit,\n  withStreamlitConnection,\n} from \"streamlit-component-lib\";\nimport React, { useEffect, useState, useRef } from \"react\";\nimport Slider from \"rc-slider\";\nimport SliderTooltip from \"./SliderTooltip\";\nimport TextField from \"@material-ui/core/TextField\";\n\nimport { useMouseUpHandler,createHandleInputValueChange, createInputChange } from \"./callbackHandlers\";\nimport {useKeyboardShortcut} from './useKeyboardShortcut'\nimport \"rc-slider/assets/index.css\";\n\nimport { createTheme, ThemeProvider } from \"@material-ui/core/styles\";\n\n\ntype StreamlitTheme = {\n  bgColor: string;\n  textColor: string;\n  primaryColor: string;\n  secondaryBackgroundColor: string;\n  base: \"light\" | \"dark\";\n};\n\nconst createStreamlitTheme = (streamlitTheme: StreamlitTheme) => {\n  const paletteType = streamlitTheme.base === \"dark\" ? \"dark\" : \"light\";\n  console.log(\"paletteType\", paletteType);\n  return createTheme({\n    palette: {\n      type: paletteType,\n      primary: {\n        main: streamlitTheme.primaryColor,\n      },\n    },\n  });\n};\n\ntype NumberOrNumberArray = number | number[];\n\nconst MySliderComponent: React.FC<any> = (props) => {\n  useEffect(() => Streamlit.setFrameHeight());\n\n  const { minValue, maxValue, initialValue } = props.args;\n\n  const valueRef = useRef(initialValue);\n  const [value, setValue] = useState(initialValue);\n  const [inputValue, setInputValue] = useState(initialValue);\n\n  const handleOnChange = (newValue: NumberOrNumberArray ): NumberOrNumberArray => {\n    setValue(newValue);\n    valueRef.current = newValue;\n    setInputValue(newValue);\n    return newValue;\n  };\n\n  const updateStreamlit = () => {\n    Streamlit.setComponentValue(valueRef.current);\n  };\n\n  useMouseUpHandler(updateStreamlit);\n  const handleInputValueChange = createHandleInputValueChange(minValue,maxValue,setInputValue, handleOnChange)\n  const handleInputChange = createInputChange(minValue,maxValue,handleOnChange, updateStreamlit)\n  \n  // Listen to \",\" and \".\" to increase/decrease the value\n  useKeyboardShortcut(value, handleOnChange, updateStreamlit);\n\n\n  const marks = {\n    [minValue]: minValue,\n    [maxValue]: maxValue,\n  };\n\n  const { theme } = props;\n  const muiTheme = createStreamlitTheme(theme);\n\n  return (\n    <ThemeProvider theme={muiTheme}>\n    <div style={{ paddingLeft: \"15px\", paddingRight: \"15px\", paddingTop: \"10px\"}}>\n      \n      <div style={{ display: \"flex\", alignItems: \"center\" }}>\n        <TextField\n          type=\"text\"\n          value={inputValue}\n          inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}\n          onChange={handleInputValueChange}\n          onKeyDown={handleInputChange}\n          variant=\"outlined\"\n          size=\"small\"\n          style={{ marginRight: \"10px\", width: \"75px\" }}\n          // className={classes.textField}\n        />\n        <Slider\n          value={value}\n          min={minValue}\n          max={maxValue}\n          marks={marks}\n          onChange={handleOnChange}\n          trackStyle={{ backgroundColor: theme.primaryColor }}\n          handleRender={(renderProps) => {\n            return (\n              <div {...renderProps.props}>\n                <SliderTooltip theme={theme}>{value}</SliderTooltip>\n              </div>\n            );\n          }}\n        />\n      </div>\n    </div>\n    </ThemeProvider>\n  );\n};\n\nexport default withStreamlitConnection(MySliderComponent);\n"
+        }
+    ]
+}

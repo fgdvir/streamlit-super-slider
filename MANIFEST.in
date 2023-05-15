@@ -1,0 +1,1 @@
+recursive-include streamlit_super_slider/frontend/dist *
