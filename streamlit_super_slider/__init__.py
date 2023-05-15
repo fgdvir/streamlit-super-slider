@@ -1,4 +1,3 @@
-import os
 import streamlit.components.v1 as components
 from pathlib import Path
 
@@ -12,8 +11,7 @@ if _RELEASE:
 else:
     _component_func = components.declare_component(
         "custom_slider",
-        # url="http://localhost:3001",
-        url="http://10.155.43.188:3002",
+        url="http://localhost:3001"
     )
     
 
