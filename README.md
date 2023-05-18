@@ -52,6 +52,15 @@ slider_value = st_slider(min_value, max_value, default_value)
 st.write(f"Selected value: {slider_value}")
 ```
 
+## Demo
+In the following demo you can see usage of the slider to show images, and all the different ways to chose where to go:
+* keybaord shortcut
+* Pressing the arrows buttons
+* Changing the value in the input text box
+* Dragging the slider
+
+![Demo](./assets/ezgif.com-video-to-gif.gif)
+
 ## Contributing
 
 We welcome contributions to the Streamlit Super Slider project. If you'd like to report bugs, request features, or contribute to the code, please [open an issue](https://github.com/fgdvir/streamlit-super-slider/issues) or [submit a pull request](https://github.com/fgdvir/streamlit-super-slider/pulls) on the GitHub repository.
