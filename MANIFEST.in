@@ -1,1 +1,1 @@
-recursive-include streamlit_super_slider/frontend/build *
+recursive-include streamlit_super_slider/frontend/build/*
