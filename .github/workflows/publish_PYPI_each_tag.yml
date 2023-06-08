@@ -18,6 +18,7 @@ jobs:
 
       - name: Install Node.js dependencies
         run: |
+          cd frontend
           npm install
 
       - name: Build JavaScript
