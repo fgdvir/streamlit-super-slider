@@ -20,7 +20,7 @@ jobs:
         run: |
           echo `pwd`
           ls
-          cd frontend
+          cd streamlit_super_slider/frontend
           npm install
 
       - name: Build JavaScript
