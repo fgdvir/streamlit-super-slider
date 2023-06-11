@@ -18,6 +18,8 @@ jobs:
 
       - name: Install Node.js dependencies
         run: |
+          echo `pwd`
+          ls
           cd frontend
           npm install
 
