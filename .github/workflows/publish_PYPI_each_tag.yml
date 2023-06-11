@@ -18,13 +18,12 @@ jobs:
 
       - name: Install Node.js dependencies
         run: |
-          echo `pwd`
-          ls
           cd streamlit_super_slider/frontend
           npm install
 
       - name: Build JavaScript
         run: |
+          cd streamlit_super_slider/frontend
           npm run build
 
       - name: Set up Python
