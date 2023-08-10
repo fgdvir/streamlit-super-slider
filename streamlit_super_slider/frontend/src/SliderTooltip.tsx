@@ -6,11 +6,13 @@ import React from "react";
 
 interface SliderTooltipProps {
   children: React.ReactNode;
+  value: number;
   theme: any;
 }
 
-const SliderTooltip: React.FC<SliderTooltipProps> = ({ children, theme={} }) => {
-    
+const SliderTooltip: React.FC<SliderTooltipProps> = ({ children, value,  theme={} }) => {
+    const inputWidth = `${Math.min(0, -value.toString().length* 40 ) + 40}%`;
+    console.log(`translate(${inputWidth}, -100%)`)
     const themeTooltip = {
         ...theme,
         color: theme.color || "red",
@@ -18,8 +20,7 @@ const SliderTooltip: React.FC<SliderTooltipProps> = ({ children, theme={} }) => 
         fontFamily: theme.fontFamily || "Source Sans Pro, mono",
         whiteSpace: theme.whiteSpace || "nowrap",
         position: "relative",
-        bottom: "100%",
-        transform: "translate(-0%, -15px)",
+        transform: `translate(${inputWidth}, -100%)`
       }
   
 

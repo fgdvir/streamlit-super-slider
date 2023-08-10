@@ -78,9 +78,13 @@ const MySliderComponent: React.FC<any> = (props) => {
     updateStreamlit();
   }
 
+  const inputWidth = `${Math.max(70, inputValue.toString().length* 20) }px`;
+  console.info("inputWidth", inputWidth);
+  const paddingRightByLength = `${Math.max(20, maxValue.toString().length* 3.5) }px`;
+
   return (
     <ThemeProvider theme={muiTheme}>
-    <div style={{ paddingLeft: "15px", paddingRight: "15px", paddingTop: "10px"}}>
+    <div style={{ paddingLeft: "20px", paddingRight: paddingRightByLength, paddingTop: "10px"}}>
       
       <div style={{ display: "flex", alignItems: "center" }}>
       <Button variant="contained" color="primary" size="medium"
@@ -103,7 +107,7 @@ const MySliderComponent: React.FC<any> = (props) => {
           onKeyDown={handleInputChange}
           variant="outlined"
           size="small"
-          style={{ marginRight: "10px", width: "75px", padding: "0px" }}
+          style={{ marginRight: "10px", width: inputWidth, padding: "0" }}
           // className={classes.textField}
         />
         <Slider
@@ -116,7 +120,7 @@ const MySliderComponent: React.FC<any> = (props) => {
           handleRender={(renderProps) => {
             return (
               <div {...renderProps.props}>
-                <SliderTooltip theme={theme}>{value}</SliderTooltip>
+                <SliderTooltip theme={theme} value={value}>{value}</SliderTooltip>
               </div>
             );
           }}
