@@ -24,7 +24,6 @@ type StreamlitTheme = {
 
 const createStreamlitTheme = (streamlitTheme: StreamlitTheme) => {
   const paletteType = streamlitTheme.base === "dark" ? "dark" : "light";
-  console.log("paletteType", paletteType);
   return createTheme({
     palette: {
       type: paletteType,

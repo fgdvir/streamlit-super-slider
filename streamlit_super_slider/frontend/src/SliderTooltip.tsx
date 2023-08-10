@@ -12,7 +12,6 @@ interface SliderTooltipProps {
 
 const SliderTooltip: React.FC<SliderTooltipProps> = ({ children, value,  theme={} }) => {
     const inputWidth = `${Math.min(0, -value.toString().length* 40 ) + 40}%`;
-    console.log(`translate(${inputWidth}, -100%)`)
     const themeTooltip = {
         ...theme,
         color: theme.color || "red",
