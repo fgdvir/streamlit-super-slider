@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='streamlit-super-slider',
-    version='0.1.6',
+    version='0.1.8',
     author='Dvir Itzkovits',
     author_email='dvir.itzko@gmail.com',
     description='A slider with a lot more features in it than the built in one.',
@@ -10,7 +10,9 @@ setup(
     long_description_content_type='text/markdown',
     url='https://github.com/fgdvir/streamlit-super-slider',
     # packages=['streamlit-super-slider'],
-    packages=find_packages(),
+    # packages=find_packages(),
+        packages=['streamlit_super_slider', 'streamlit_super_slider.frontend', 'streamlit_super_slider.frontend.build', 'streamlit_super_slider.frontend.build.static', 'streamlit_super_slider.frontend.build.static.css', 'streamlit_super_slider.frontend.build.static.js'],
+
     include_package_data=True,
     classifiers=[
         "Programming Language :: Python :: 3",],
