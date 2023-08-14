@@ -10,8 +10,8 @@ setup(
     long_description_content_type='text/markdown',
     url='https://github.com/fgdvir/streamlit-super-slider',
     # packages=['streamlit-super-slider'],
-    # packages=find_packages(),
-        packages=['streamlit_super_slider', 'streamlit_super_slider.frontend', 'streamlit_super_slider.frontend.build', 'streamlit_super_slider.frontend.build.static', 'streamlit_super_slider.frontend.build.static.css', 'streamlit_super_slider.frontend.build.static.js'],
+    # packages=['streamlit_super_slider', 'streamlit_super_slider.frontend', 'streamlit_super_slider.frontend.build', 'streamlit_super_slider.frontend.build.static', 'streamlit_super_slider.frontend.build.static.css', 'streamlit_super_slider.frontend.build.static.js'],
+    packages=find_packages(),
 
     include_package_data=True,
     classifiers=[
