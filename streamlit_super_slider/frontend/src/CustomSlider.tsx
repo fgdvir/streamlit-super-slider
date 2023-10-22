@@ -39,13 +39,17 @@ type NumberOrNumberArray = number | number[];
 const MySliderComponent: React.FC<any> = (props) => {
   useEffect(() => Streamlit.setFrameHeight());
 
-  const { minValue, maxValue, initialValue } = props.args;
+  const { minValue, maxValue, initialValue, marks, steps, dots } = props.args;
 
   const valueRef = useRef(initialValue);
   const [value, setValue] = useState(initialValue);
   const [inputValue, setInputValue] = useState(initialValue);
 
   const handleOnChange = (newValue: NumberOrNumberArray ): NumberOrNumberArray => {
+    if (newValue < minValue || newValue > maxValue) {
+      return valueRef.current;
+    }
+
     setValue(newValue);
     valueRef.current = newValue;
     setInputValue(newValue);
@@ -64,10 +68,6 @@ const MySliderComponent: React.FC<any> = (props) => {
   useKeyboardShortcut(value, handleOnChange, updateStreamlit);
 
 
-  const marks = {
-    [minValue]: minValue,
-    [maxValue]: maxValue,
-  };
 
   const { theme } = props;
   const muiTheme = createStreamlitTheme(theme);
@@ -109,11 +109,15 @@ const MySliderComponent: React.FC<any> = (props) => {
           style={{ marginRight: "10px", width: inputWidth, padding: "0" }}
           // className={classes.textField}
         />
-        <Slider
+
+        <Slider 
+          {...(dots ? { dots: true } : {})}
+
           value={value}
           min={minValue}
           max={maxValue}
           marks={marks}
+          step={steps}
           onChange={handleOnChange}
           trackStyle={{ backgroundColor: theme.primaryColor }}
           handleRender={(renderProps) => {

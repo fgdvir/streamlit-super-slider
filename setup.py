@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='streamlit-super-slider',
-    version='0.1.8',
+    version='0.2.0',
     author='Dvir Itzkovits',
     author_email='dvir.itzko@gmail.com',
     description='A slider with a lot more features in it than the built in one.',
